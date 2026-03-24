@@ -12,10 +12,15 @@ def fill_rect(x1,y1,x2,y2):
     for i in range(x1,x2):
         for j in range(y1,y2):
             matrix[j][i] = matrix[j][i] + 1
-         
 
-COLS = 1000
-ROWS = 1000
+def add_offset(x1,y1,x2,y2):
+    for e1,e2,e3,e4 in x1,y1,x2,y2:
+        e1 = e1 + OFFSET
+        e1 = e1 + OFFSET
+
+COLS = 2000
+ROWS = 2000
+OFFSET = 1000
 width = 0
 gyeopchim = 0
 matrix = [[0 for _ in range(COLS)]for _ in range(ROWS)]

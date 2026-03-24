@@ -16,7 +16,9 @@ def fill_rect(x1,y1,x2,y2):
 def add_offset(x1,y1,x2,y2):
     for e1,e2,e3,e4 in x1,y1,x2,y2:
         e1 = e1 + OFFSET
-        e1 = e1 + OFFSET
+        e2 = e2 + OFFSET
+        e3 = e3 + OFFSET
+        e4 = e4 + OFFSET
 
 COLS = 2000
 ROWS = 2000

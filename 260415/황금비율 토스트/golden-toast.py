@@ -50,7 +50,7 @@ class dll:
 
     def erase(self, node):
         if node == None:
-            return print("None node")
+            return 
             
         elif node == self.head:
             self.head.next.prev = None

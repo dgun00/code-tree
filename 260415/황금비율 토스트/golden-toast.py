@@ -38,12 +38,15 @@ class dll:
     def insert(self,it_node,new_data):
         new_node = Node(new_data)
 
-        new_node.next = it_node.next
-        it_node.next.prev = new_node
-        it_node.next = new_node
-        new_node.prev = it_node
-
-
+        if it_node == self.tail:
+            new_node.prev = it_node
+            it_node.next = new_node
+            self.tail = new_node
+        else:
+            new_node.next = it_node.next
+            new_node.prev = it_node
+            it_node.next.prev = new_node
+            it_node.next = new_node
 
     def erase(self, node):
         if node == None:

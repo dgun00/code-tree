@@ -95,9 +95,10 @@ for cmd in commands:
 
 
 
-node = dlist.head.next
-while node != None:
-    print(node.data,end="")
+node = dlist.head
+
+while node.next != None:
+    print(node.next.data,end="")
     node = node.next
 
 

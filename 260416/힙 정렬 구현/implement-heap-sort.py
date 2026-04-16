@@ -14,7 +14,7 @@ def heapify(arr,n,i):
         if root < arr[large_idx]:
             arr[i], arr[large_idx] = arr[large_idx], arr[i]
             heapify(arr,n,large_idx)
-    else:
+    elif left_idx <= n:
         if root < arr[left_idx]:
             arr[i], arr[left_idx] = arr[left_idx], arr[i]
             heapify(arr,n,left_idx)

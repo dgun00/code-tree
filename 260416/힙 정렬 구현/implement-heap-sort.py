@@ -22,11 +22,14 @@ def heapify(arr,n,i):
 
 def heap_sort(arr,n):
     last_idx = n;
-    for _ in range(n):
-        for i in range(last_idx//2,0,-1):
-            heapify(arr,last_idx,i)
+    
+    for i in range(last_idx//2,0,-1):
+        heapify(arr,last_idx,i)
+    
+    for _ in range(n+!):
         arr[1], arr[last_idx] = arr[last_idx], arr[1]
         last_idx -=1
+        heapify(arr,last_idx,1)
 
 heap_sort(arr,n)
 

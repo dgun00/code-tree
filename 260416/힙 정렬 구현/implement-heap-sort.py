@@ -13,9 +13,11 @@ def heapify(arr,n,i):
         large_idx = left_idx if arr[left_idx] > arr[right_idx] else right_idx
         if root < arr[large_idx]:
             arr[i], arr[large_idx] = arr[large_idx], arr[i]
+            heapify(arr,n,large_idx)
     else:
         if root < arr[left_idx]:
             arr[i], arr[left_idx] = arr[left_idx], arr[i]
+            heapify(arr,n,left_idx)
     
 
         

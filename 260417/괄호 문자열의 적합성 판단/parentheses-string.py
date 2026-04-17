@@ -31,16 +31,14 @@ def f(stk, str):
         
         if e == ')':
             if stk.empty():
-                res = "No"
-                return;
+                return "No";
             
             else: stk.pop()
 
     if stk.empty():
-        res= "Yes"
+        return "Yes"
     else:
-        res = "No"
+        return "No"
 
-    print(res)
 
-f(stk,str)
+print(f(stk,str))

@@ -32,6 +32,7 @@ def f(stk, str):
         if e == ')':
             if stk.empty():
                 res = "No"
+                break;
             
             else: stk.pop()
 

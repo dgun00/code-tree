@@ -6,7 +6,7 @@ S = [gift[1] for gift in gifts]
 # Please write your code here.
 
 total =0
-sorted = sorted(gifts, key=lambda x: x[0]/2 + x[1])
+sorted = sorted(gifts, key=lambda x: x[0] + x[1])
 for p,s in gifts:
     total += p + s
 

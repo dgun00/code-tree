@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 # Please write your code here.
 
 total = sum(arr)
-min = 1000000
+min = 10000000
 for i in range(N-1):
     for j in range(i+1,N):
         if abs(total - (arr[i]+arr[j])) <= min:

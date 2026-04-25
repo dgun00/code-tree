@@ -10,4 +10,4 @@ for i in range(N-1):
         if abs(total - (arr[i]+arr[j])) <= min:
             min = abs(total - (arr[i]+arr[j]))
 
-print(min-S)
+print(abs(min-S))

@@ -12,7 +12,7 @@ for p,s in gifts:
     total += p + s
 
 idx = N-1
-while 1:
+while total >B:
     if (total - (sorted[idx][0]/2 + sorted[idx][1])) > B:
         total = (total - (sorted[idx][0] + sorted[idx][1]))
         idx -= 1

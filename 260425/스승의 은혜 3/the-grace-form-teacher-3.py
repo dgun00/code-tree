@@ -5,17 +5,32 @@ S = [gift[1] for gift in gifts]
 
 # Please write your code here.
 
-total =0
-sorted = sorted(gifts, key=lambda x: x[0] + x[1])
-for p,s in gifts:
-    total += p + s
+max_cnt = -1
+for i in range(N):
+    costs = []
 
-idx = N-1
-while 1:
-    if (total - (sorted[idx][0]/2 + sorted[idx][1])) > B:
-        total = (total - (sorted[idx][0] + sorted[idx][1]))
-        idx -= 1
-    else: break
-res = idx+1
+    for j in range(N):
+        if i==j:
+            costs.append(P[j]/2+S[j])
+        else:
+            costs.append(P[j]+S[j])
 
-print(res)
+    costs.sort()
+    total = 0
+    cnt=0
+    for e in costs:
+        total += e
+        cnt+=1
+        if total > B:
+            cnt-=1
+            break
+        
+
+    if cnt > max_cnt:
+        max_cnt = cnt
+
+print(max_cnt)
+
+
+
+

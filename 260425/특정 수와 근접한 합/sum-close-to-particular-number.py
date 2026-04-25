@@ -7,7 +7,7 @@ total = sum(arr)
 min = 10000000
 for i in range(N-1):
     for j in range(i+1,N):
-        if abs(total - (arr[i]+arr[j])) <= min:
-            min = abs(total - (arr[i]+arr[j]))
+        if abs( S - (total - (arr[i]+arr[j]))) <= min:
+            min = abs( S - (total - (arr[i]+arr[j])))
 
-print(abs(min-S))
+print(min)

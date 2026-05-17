@@ -48,14 +48,18 @@ def find_max(n):
         max_res = max(max_res,current_res)
         return
 
-    alpha_num_couple[n][1] = 1
-    find_max(n+1)
-    alpha_num_couple[n][1] = 2
-    find_max(n+1)
-    alpha_num_couple[n][1] = 3
-    find_max(n+1)
-    alpha_num_couple[n][1] = 4
-    find_max(n+1)
+    for i in range(1,5):
+        alpha_num_couple[n][1] = i
+        find_max(n+1)
+
+    # alpha_num_couple[n][1] = 1
+    # find_max(n+1)
+    # alpha_num_couple[n][1] = 2
+    # find_max(n+1)
+    # alpha_num_couple[n][1] = 3
+    # find_max(n+1)
+    # alpha_num_couple[n][1] = 4
+    # find_max(n+1)
     
 
 find_max(0)

@@ -73,6 +73,8 @@ def delete_block(cnt,st_idx):
         res = 0
 
         return
+    if st_idx == len(block_pos):
+        return 
 
     for i in range(st_idx, len(block_pos)):
         x, y = block_pos[i]
@@ -80,16 +82,24 @@ def delete_block(cnt,st_idx):
         grid[x][y] = 0
         delete_block(cnt+1,i+1)
         grid[x][y] = 1
+    
+   
 
 
 
-
-for i in range(n):
-    for j in range(n):
-        if grid[i][j] == 1:
-            block_pos.append((i,j))
+block_pos = [
+    (i,j)
+    for i in range(n)
+    for j in range(n)
+    if grid[i][j] == 1
+]
+# for i in range(n):
+#     for j in range(n):
+#         if grid[i][j] == 1:
+#             block_pos.append((i,j))
 
 delete_block(0,0)
 print(max_res)
+
 
 

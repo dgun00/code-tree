@@ -34,10 +34,11 @@ def can_go(x,y,prev_heigh):
 
 def bfs(st_x,st_y):
     cnt = 0
-
-    q.append((st_x,st_y))
-    visited[st_x][st_y] = 1
-    cnt+=1
+    if visited[st_x][st_y] == 0:
+        
+        q.append((st_x,st_y))
+        visited[st_x][st_y] = 1
+        cnt+=1
 
     while q:
         x,y = q.popleft()
@@ -73,8 +74,8 @@ def calc():
     global visited 
     res = 0
     for x,y in selected_city:
-        if visited[x][y] == 0:
-            res += bfs(x,y)
+        
+        res += bfs(x,y)
        
     visited = [[0]*n for _ in range(n)]
 

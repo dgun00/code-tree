@@ -8,9 +8,9 @@ p = [job[2] for job in jobs]
 
 jobs.sort()
 
-dp = [0] * 1001
+dp = [0] * (n+1)
 
-jobs_s_e = [[0,0] for _ in range(1001)]
+jobs_s_e = [[0,0] for _ in range(n+1)]
 
 idx = 1
 

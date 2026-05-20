@@ -18,9 +18,9 @@ for i in range(1,M+1):
     for v in coin:
         if v > i:
             continue
-        elif v==i:
-            dp[i] = 1
-            continue
+        # elif v==i:
+        #     dp[i] = 1
+        #     continue
 
         dp[i] = min(dp[i],dp[i-v] + 1)
 
